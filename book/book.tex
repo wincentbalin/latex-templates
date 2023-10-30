@@ -1,0 +1,56 @@
+\documentclass{book}
+% document type with chapters and two-page layout
+
+\usepackage{subfiles}
+% enables splitting the document into multiple files
+
+\usepackage{datetime}
+% date formatting functions
+
+\usepackage{graphicx} % enables including images
+\graphicspath{ {./images/} }
+
+\usepackage{csvsimple}
+% https://ctan.mirror.norbert-ruehl.de/macros/latex/contrib/csvsimple/csvsimple.pdf
+% CSV data in tables
+
+\usepackage{biblatex} % bibliography features
+\addbibresource{bibliography.bib}
+
+\usepackage{appendix}
+% http://vesta.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/macros/latex/contrib/appendix/appendix.pdf
+% extra features for appendices
+
+\usepackage[]{tocbibind}
+% https://packages.oth-regensburg.de/ctan/macros/latex/contrib/tocbibind/tocbibind.pdf
+% adds bibliographies to TOC
+
+\usepackage[hidelinks]{hyperref}
+% https://ftp.tu-chemnitz.de/pub/tex/macros/latex/contrib/hyperref/doc/hyperref-doc.pdf
+% hyperlinks within the documents, e.g. from the table of contents
+% hidelinks prevents any special highlighting and renders links as regular text but they still work
+
+
+\usepackage{booktabs}
+% https://ctan.mc1.root.project-creative.net/macros/latex/contrib/booktabs/booktabs.pdf
+% much better tables
+
+\usepackage[final]{microtype}
+% Micro-typographic improvements
+
+\usepackage[T1]{fontenc}
+% switch font encoding to more glyphs with better i18n support
+
+\author{Author Name}
+\date{\formatdate{13}{2}{2021} }
+\title{A Book Set in \LaTeX{}}
+
+\begin{document}
+  \maketitle
+  \tableofcontents
+
+  \subfile{ch01-about.tex}
+  \subfile{ch02-books.tex}
+  \subfile{ch03-lists.tex}
+  \subfile{chAA-appendix.tex}
+\end{document}

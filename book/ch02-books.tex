@@ -1,0 +1,35 @@
+\documentclass[latex-playground.tex]{subfiles}
+
+\begin{document}
+
+\chapter{Books}
+
+Let's talk about books. For example a really good one is \citetitle{fledgling}~\cite{fledgling}, among others:
+
+\begin{table}[h]%
+  \label{table:good-books}
+  \csvstyle{myTableStyle}{
+    tabular=r l l c c,
+    table head= & Author & Title & Year & Pages \\\midrule,
+    % late after last line=\\\bottomrule,
+    late after line=\\,
+    head to column names}
+  \csvreader[myTableStyle]{ch02-books.csv}{}%
+  {\thecsvrow{} & \author{} & \title{} & \year{} & \pages{}}%
+  
+  \caption{A bunch of good books}
+\end{table}
+
+The same table without the magic \verb=\csvstyle=:
+
+\begin{table}[h]%
+  \label{table:good-books-again}
+  \begin{tabular}{r l l c c}%
+    & Author & Title & Year & Pages \\\midrule%
+    \csvreader[head to column names, late after line=\\]{ch02-books.csv}{}%
+    {\thecsvrow{} & \author{} & \title{} & \year{} & \pages{}}
+  \end{tabular}
+  \caption{A bunch of good books … again}
+\end{table}
+
+\end{document}
