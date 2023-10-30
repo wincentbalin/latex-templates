@@ -1,0 +1,63 @@
+%\documentclass[12pt]{dinbrief}
+\documentclass[
+	11pt,
+	a4paper,
+	letter,
+	parskip=yes,
+	fromemail,
+	fromphone
+]{scrlttr2} % DIN 5008 letter layout that fits windowed envelopes
+\usepackage[utf8x]{inputenc} % unicode stuff
+\usepackage[english]{babel} % i18n stuff
+\usepackage{dirtytalk} % provides \say{} macro for simple quotes
+\usepackage{booktabs} % prettier table rendering
+\usepackage{tabularx} % flexible table environment with auto-expanding X columns
+\usepackage[T1]{fontenc} % switch font encoding to more glyphs with better i18n support
+\usepackage{lmodern} % Latin Modern font family
+\usepackage{datetime}
+
+\setkomavar{fromname}{Author Name}
+\setkomavar{fromaddress}{Some Street 76\\
+                         12345 Whatever City}
+\setkomavar{fromemail}{mail@example.org}
+\setkomavar{fromphone}{0123 12345678}
+
+\date{\formatdate{24}{11}{2023} }
+
+\setkomavar{subject}{Invoice Nr 42}
+
+\begin{document}
+\begin{letter}{%
+		Recipient Name\\
+		c/o Some Other Person\\
+		Another Street 21\\[\medskipamount]
+		67890 Next City}
+
+
+	\opening{To whom it may concern,}
+
+	Work the amazing work I did on your project, I charge the following:
+
+	\begin{tabularx}{\textwidth}{Xr}
+		14 hours at a rate of 120,00€		&  1680,00€ \\
+		Materials 											&   760,00€ \\
+		\midrule
+		Total														& 2440,00€ \\
+		\bottomrule
+	\end{tabularx}
+
+	Pay on time, or else.
+
+	Please transfer the amount owed to the folling account:
+
+	IBAN:\ DE00 0000 0000 0000 0000 00\\
+	BIC:\ ABCDEFGH000
+
+	Please include the incoice number in the transfer for reference.
+
+	\closing{Kind Regards,}
+
+\end{letter}
+
+\end{document}
+
