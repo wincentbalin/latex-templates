@@ -8,4 +8,5 @@ I'll expand these as I go, hopefully zeroing in on something actually usable.
 
 ## Things to add maybe
 
-* `latexmk` <https://www.ctan.org/pkg/latexmk>
+* ~~`latexmk` <https://www.ctan.org/pkg/latexmk>~~
+

@@ -2,6 +2,5 @@
 
 set -xe
 
-mkdir -p out
-pdflatex -output-directory out letter.tex
+latexmk -pdf -outdir=out "$@" letter.tex
 
