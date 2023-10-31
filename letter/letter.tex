@@ -6,13 +6,30 @@
 	fromemail,
 	fromphone
 ]{scrlttr2} % DIN 5008 letter layout that fits windowed envelopes
-\usepackage[english]{babel} % i18n stuff
-\usepackage{dirtytalk} % provides \say{} macro for simple quotes
-\usepackage{booktabs} % prettier table rendering
-\usepackage{tabularx} % flexible table environment with auto-expanding X columns
-\usepackage[T1]{fontenc} % switch font encoding to more glyphs with better i18n support
-\usepackage{lmodern} % Latin Modern font family
-\usepackage{datetime}
+
+% begin base-directives
+	% internationalization, typographic rules for many languages
+	\usepackage[english]{babel}
+	
+	% date handling and formatting
+	\usepackage{datetime2}
+	
+	% fixes some encoding issues
+	% https://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
+	\usepackage[T1]{fontenc} % fixes some encoding issues
+	
+	% Latin Modern font family
+	\usepackage{lmodern}
+	
+	% provides \say{} macro for simple quotes
+	\usepackage{dirtytalk}
+	
+	% prettier table rendering
+	\usepackage{booktabs}
+	
+	% flexible table environment with auto-expanding X columns
+	\usepackage{tabularx}
+% end base-directives
 
 \setkomavar{fromname}{Author Name}
 \setkomavar{fromaddress}{Some Street 76\\
