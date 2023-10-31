@@ -5,7 +5,7 @@
 	\usepackage[english]{babel}
 	
 	% date handling and formatting
-	\usepackage{datetime2}
+	\usepackage[de-DE]{datetime2}
 	
 	% fixes some encoding issues
 	% https://tex.stackexchange.com/questions/664/why-should-i-use-usepackaget1fontenc
@@ -22,14 +22,22 @@
 	
 	% flexible table environment with auto-expanding X columns
 	\usepackage{tabularx}
+	
+	% https://ftp.tu-chemnitz.de/pub/tex/macros/latex/contrib/hyperref/doc/hyperref-doc.pdf
+	% hyperlinks within the documents, e.g. from the table of contents
+	% hidelinks prevents any special highlighting and renders links as regular text but they still work
+	\usepackage[hidelinks]{hyperref}
+	
+	% Micro-typographic improvements
+	\usepackage[final]{microtype}
 % end base-directives
 
 \usepackage[style=apa,backend=biber]{biblatex}
 \addbibresource{article.bib}
 
-\title{TITLE}
-\author{AUTHOR}
-\date{\formatdate{4}{10}{2023}}
+\title{Title}
+\author{Author Name}
+\date{\DTMdate{2023-10-31}}
 
 
 \begin{document}
